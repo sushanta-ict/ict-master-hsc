@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="HSC ICT Class 11–12 MCQ Practice, Model Test and Chapter-wise Quiz by Sushanta Sharma.">
+<meta name="theme-color" content="#102a43">
+<title>ICT Master — HSC ICT MCQ</title>
+<style>
+:root{--navy:#102a43;--blue:#1769aa;--cyan:#22b8cf;--bg:#f3f7fb;--ink:#172b4d;--muted:#62748a;--white:#fff;--green:#16865b;--red:#d64545}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;color:var(--ink)}
+header{background:linear-gradient(120deg,#102a43,#1769aa);color:white;padding:22px 16px 28px}
+.wrap{max-width:1050px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-size:21px;font-weight:850;letter-spacing:.2px}.tag{font-size:12px;background:#ffffff20;padding:7px 10px;border-radius:30px}
+.hero{padding:24px 0 4px}.hero h1{font-size:clamp(25px,5vw,39px);margin:0 0 8px}.hero p{margin:0;color:#d9eafa}
+nav{display:flex;gap:8px;overflow:auto;padding:12px 0}.navbtn,.btn{border:0;border-radius:12px;padding:11px 15px;font-weight:700;cursor:pointer}.navbtn{background:#ffffff18;color:white;white-space:nowrap}.navbtn.active{background:white;color:var(--navy)}
+main{padding:20px 14px 50px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:white;border:1px solid #e3eaf1;border-radius:17px;padding:17px;box-shadow:0 5px 18px #102a4308}.stat strong{font-size:26px;display:block}.muted{color:var(--muted);font-size:13px}.section{margin-top:18px}.section h2{font-size:20px;margin:0 0 12px}.ad{border:1px dashed #a9b9c9;background:#f9fbfd;color:#718096;text-align:center;padding:15px;border-radius:12px;font-size:12px;margin:16px 0}
+.chapters{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.chapter{display:flex;justify-content:space-between;align-items:center;text-align:left;background:white;border:1px solid #e3eaf1;border-radius:13px;padding:14px;cursor:pointer;color:var(--ink)}.chapter small{display:block;color:var(--muted);margin-top:3px}.chapter b{color:var(--blue)}
+.btn{background:var(--blue);color:white}.btn.secondary{background:#eaf2f9;color:var(--blue)}.btn.green{background:var(--green)}.btn:disabled{opacity:.45;cursor:not-allowed}
+.quizbox{max-width:760px;margin:auto}.quizhead{display:flex;justify-content:space-between;gap:10px;align-items:center}.progress{height:8px;background:#e7edf3;border-radius:9px;overflow:hidden;margin:14px 0}.progress span{display:block;height:100%;background:var(--cyan);width:0}.qtext{font-size:20px;font-weight:750;line-height:1.55;margin:20px 0}.option{display:block;width:100%;text-align:left;padding:14px;margin:9px 0;border:1px solid #dbe4ed;border-radius:12px;background:white;color:var(--ink);cursor:pointer;font-size:15px}.option.selected{border-color:var(--blue);background:#eef6ff}.option.correct{border-color:var(--green);background:#e9f8f1}.option.wrong{border-color:var(--red);background:#fff0f0}.feedback{padding:12px;border-radius:10px;margin:12px 0;background:#f0f5fa}.hide{display:none!important}.result{text-align:center}.result .score{font-size:48px;font-weight:900;color:var(--blue)}footer{background:var(--navy);color:#d9eafa;padding:25px 15px;text-align:center}a{color:inherit}.contact{font-size:15px;margin-top:8px}
+@media(max-width:650px){.grid{grid-template-columns:1fr 1fr}.chapters{grid-template-columns:1fr}.top{align-items:flex-start}.tag{font-size:10px}.qtext{font-size:18px}}
+</style></head>
+<body>
+<header><div class="wrap">
+ <div class="top"><div class="brand">📘 ICT MASTER</div><div class="tag">HSC ICT • Class XI & XII</div></div>
+ <div class="hero"><h1>ICT শিখুন, MCQ-তে এগিয়ে থাকুন</h1><p>অধ্যায়ভিত্তিক অনুশীলন • মডেল টেস্ট • নিজের প্রস্তুতি যাচাই</p></div>
+ <nav><button class="navbtn active" onclick="showPage('home',this)">হোম</button><button class="navbtn" onclick="showPage('chapters',this)">অধ্যায়ভিত্তিক MCQ</button><button class="navbtn" onclick="showPage('about',this)">শিক্ষক পরিচিতি</button></nav>
+</div></header>
+<main class="wrap">
+ <section id="home">
+  <div class="grid">
+   <div class="card stat"><strong id="totalQ">২০</strong><span class="muted">নমুনা MCQ</span></div>
+   <div class="card stat"><strong>৬</strong><span class="muted">ICT অধ্যায়</span></div>
+   <div class="card stat"><strong id="best">০%</strong><span class="muted">আপনার সেরা স্কোর</span></div>
+  </div>
+  <div class="ad">বিজ্ঞাপনের জায়গা — Google AdSense অনুমোদনের পর এখানে বিজ্ঞাপন দেখাতে পারবেন</div>
+  <div class="section card"><h2>🎯 আজই অনুশীলন শুরু করুন</h2><p class="muted">সময় ধরে MCQ দিন, সঙ্গে সঙ্গে উত্তর মিলিয়ে নিন এবং শেষে ফলাফল দেখুন।</p><button class="btn" onclick="startQuiz('all')">২০টি MCQ দিয়ে মডেল টেস্ট</button> <button class="btn secondary" onclick="showPage('chapters')">অধ্যায় বেছে নিন</button></div>
+  <div class="section"><h2>জনপ্রিয় অধ্যায়</h2><div class="chapters" id="homeChapters"></div></div>
+ </section>
+ <section id="chapters" class="hide"><h2>অধ্যায়ভিত্তিক MCQ</h2><p class="muted">যে অধ্যায়টি পড়তে চান সেটি নির্বাচন করুন।</p><div class="chapters" id="chapterList"></div><div class="ad">বিজ্ঞাপনের জায়গা — AdSense ad unit code এখানে বসবে</div></section>
+ <section id="quiz" class="hide"><div class="quizbox card">
+  <div class="quizhead"><b id="quizTitle">মডেল টেস্ট</b><span class="muted" id="counter">১ / ২০</span></div><div class="progress"><span id="bar"></span></div>
+  <div class="qtext" id="question"></div><div id="options"></div><div id="feedback" class="feedback hide"></div>
+  <div style="display:flex;justify-content:space-between;gap:10px;margin-top:16px"><button class="btn secondary" onclick="quitQuiz()">বের হয়ে যান</button><button class="btn" id="next" onclick="nextQ()" disabled>পরের প্রশ্ন</button></div>
+ </div></section>
+ <section id="result" class="hide"><div class="card result"><h2>আপনার পরীক্ষার ফলাফল</h2><div class="score" id="score">০%</div><p id="resultText"></p><button class="btn" onclick="startQuiz('all')">আবার পরীক্ষা দিন</button> <button class="btn secondary" onclick="showPage('chapters')">অন্য অধ্যায়</button></div></section>
+ <section id="about" class="hide"><div class="card"><h2>শিক্ষক পরিচিতি</h2><h3>Sushanta Sharma</h3><p>Expert in ICT for Class Eleven and Twelve</p><p class="contact">📞 <a href="tel:01717024720">01717024720</a></p><p class="muted">ICT বিষয়ে ক্লাস, MCQ প্রস্তুতি ও মডেল টেস্টের জন্য যোগাযোগ করুন।</p><a class="btn" style="display:inline-block;text-decoration:none" href="https://wa.me/8801717024720">WhatsApp-এ যোগাযোগ</a></div>
+ <div class="ad">বিজ্ঞাপনের জায়গা — বিজ্ঞাপন ও স্পন্সর কনটেন্টের জন্য</div></section>
+</main>
+<footer><b>ICT MASTER</b><div>HSC ICT Practice Platform</div><div class="contact">Sushanta Sharma • 01717024720</div><div class="muted" style="color:#b8cce0;margin-top:12px">শিক্ষামূলক অনুশীলনের জন্য তৈরি। প্রশ্নের সংখ্যা ও সিলেবাস নিয়মিত হালনাগাদ করুন।</div></footer>
+<script>
+const chapters=[
+ {id:1,name:'তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ',short:'অধ্যায় ১'},
+ {id:2,name:'কমিউনিকেশন সিস্টেমস ও নেটওয়ার্কিং',short:'অধ্যায় ২'},
+ {id:3,name:'সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস',short:'অধ্যায় ৩'},
+ {id:4,name:'ওয়েব ডিজাইন পরিচিতি ও HTML',short:'অধ্যায় ৪'},
+ {id:5,name:'প্রোগ্রামিং ভাষা',short:'অধ্যায় ৫'},
+ {id:6,name:'ডেটাবেজ ম্যানেজমেন্ট সিস্টেম',short:'অধ্যায় ৬'}
+];
+const questions=[
+[1,'ICT-এর পূর্ণরূপ কোনটি?',['Information and Communication Technology','International Computer Technique','Internet Communication Transfer','Information Control Technology'],0,'ICT-এর পূর্ণরূপ Information and Communication Technology।'],
+[1,'ই-গভর্ন্যান্স বলতে কী বোঝায়?',['ইন্টারনেটভিত্তিক সরকারি সেবা','অনলাইন গেম','ডিজিটাল ছবি সম্পাদনা','কম্পিউটার তৈরি'],0,'তথ্যপ্রযুক্তির মাধ্যমে সরকারি সেবা প্রদানই ই-গভর্ন্যান্স।'],
+[1,'নিচের কোনটি বায়োমেট্রিক শনাক্তকরণ?',['পাসওয়ার্ড','ফিঙ্গারপ্রিন্ট','ইউজারনেম','পিন নম্বর'],1,'ফিঙ্গারপ্রিন্ট মানুষের শারীরিক বৈশিষ্ট্যভিত্তিক শনাক্তকরণ।'],
+[2,'LAN-এর পূর্ণরূপ কী?',['Local Area Network','Large Access Node','Long Area Network','Local Access Number'],0,'LAN হলো Local Area Network।'],
+[2,'নেটওয়ার্কে রাউটারের প্রধান কাজ কী?',['ডেটা প্রিন্ট করা','পথ নির্ধারণ করে ডেটা পাঠানো','ফাইল কমপ্রেস করা','মনিটর নিয়ন্ত্রণ'],1,'রাউটার নেটওয়ার্কের মধ্যে ডেটা প্যাকেটের পথ নির্ধারণ করে।'],
+[2,'নিচের কোনটি তারবিহীন যোগাযোগ প্রযুক্তি?',['ফাইবার অপটিক','ইথারনেট কেবল','Wi-Fi','কো-অ্যাক্সিয়াল কেবল'],2,'Wi-Fi বেতার নেটওয়ার্ক প্রযুক্তি।'],
+[2,'ইন্টারনেটের যোগাযোগ প্রোটোকলের স্যুট কোনটি?',['HTML','TCP/IP','SQL','JPEG'],1,'ইন্টারনেট TCP/IP প্রোটোকল স্যুট ব্যবহার করে।'],
+[3,'বাইনারি সংখ্যা পদ্ধতির ভিত্তি কত?',['২','৮','১০','১৬'],0,'বাইনারি সংখ্যা পদ্ধতিতে ০ ও ১—দুটি অঙ্ক ব্যবহৃত হয়।'],
+[3,'(1010)₂ এর দশমিক মান কত?',['৮','৯','১০','১২'],2,'৮+০+২+০ = ১০।'],
+[3,'১ বাইট সমান কত বিট?',['৪','৮','১৬','৩২'],1,'১ বাইট = ৮ বিট।'],
+[3,'কম্পিউটারের ALU-এর কাজ কী?',['গাণিতিক ও যৌক্তিক কাজ','ডেটা সংরক্ষণ','বিদ্যুৎ সরবরাহ','প্রিন্ট করা'],0,'ALU গাণিতিক ও লজিক্যাল অপারেশন সম্পন্ন করে।'],
+[4,'HTML-এর পূর্ণরূপ কী?',['Hyper Text Markup Language','High Transfer Machine Language','Hyperlink Text Making Logic','Home Tool Markup Language'],0,'HTML হলো Hyper Text Markup Language।'],
+[4,'HTML-এ সবচেয়ে বড় শিরোনাম ট্যাগ কোনটি?',['<h6>','<head>','<h1>','<title>'],2,'h1 হলো HTML-এর সর্বোচ্চ স্তরের heading tag।'],
+[4,'ওয়েব পেজে ছবি যুক্ত করার ট্যাগ কোনটি?',['<pic>','<img>','<image>','<src>'],1,'ছবি যুক্ত করতে img ট্যাগ ব্যবহার করা হয়।'],
+[4,'HTML ডকুমেন্টের মূল দৃশ্যমান কনটেন্ট থাকে কোন অংশে?',['<head>','<meta>','<body>','<title>'],2,'ওয়েব পেজের দৃশ্যমান কনটেন্ট body অংশে থাকে।'],
+[5,'C ভাষায় আউটপুট দেখানোর ফাংশন কোনটি?',['scanf()','printf()','main()','gets()'],1,'printf() দিয়ে আউটপুট প্রদর্শন করা হয়।'],
+[5,'প্রোগ্রামে একই কাজ বারবার করাতে কোন কাঠামো ব্যবহৃত হয়?',['সিলেকশন','লুপ','অ্যারে','ফাংশন কলই শুধু'],1,'পুনরাবৃত্ত কাজের জন্য loop ব্যবহার করা হয়।'],
+[5,'C ভাষায় একটি স্টেটমেন্টের শেষে সাধারণত কোন চিহ্ন বসে?',[':',';','.',','],1,'C ভাষায় statement সাধারণত semicolon দিয়ে শেষ হয়।'],
+[6,'DBMS-এর পূর্ণরূপ কী?',['Data Backup Management System','Database Management System','Digital Base Memory Store','Data Binary Machine Setup'],1,'DBMS হলো Database Management System।'],
+[6,'রিলেশনাল ডেটাবেজে সারিকে কী বলা হয়?',['ফিল্ড','রেকর্ড/টাপল','কলাম','কুয়েরি'],1,'রিলেশনাল টেবিলের প্রতিটি সারি একটি record বা tuple।']
+];
+const bn=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
+let pool=[],idx=0,answers=[],current=null,seconds=0,timer=null;
+function renderChapters(){let s=chapters.map(c=>`<button class="chapter" onclick="startQuiz(${c.id})"><span><b>${c.short}</b><small>${c.name}</small></span><span>›</span></button>`).join('');document.getElementById('chapterList').innerHTML=s;document.getElementById('homeChapters').innerHTML=s}
+function showPage(id,btn){['home','chapters','quiz','result','about'].forEach(x=>document.getElementById(x).classList.toggle('hide',x!==id));document.querySelectorAll('.navbtn').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');}
+function startQuiz(ch){clearInterval(timer);pool=questions.filter(q=>ch==='all'||q[0]===ch).sort(()=>Math.random()-.5);idx=0;answers=[];document.getElementById('quizTitle').textContent=ch==='all'?'পূর্ণাঙ্গ মডেল টেস্ট':chapters[ch-1].name;showPage('quiz');renderQ()}
+function renderQ(){current=pool[idx];document.getElementById('counter').textContent=bn(idx+1)+' / '+bn(pool.length);document.getElementById('bar').style.width=((idx)/pool.length*100)+'%';document.getElementById('question').textContent=current[1];document.getElementById('feedback').classList.add('hide');document.getElementById('next').disabled=true;document.getElementById('next').textContent=idx===pool.length-1?'ফলাফল দেখুন':'পরের প্রশ্ন';document.getElementById('options').innerHTML=current[2].map((o,i)=>`<button class="option" onclick="choose(${i},this)">${'ক খ গ ঘ'[i]}. ${o.replaceAll('<','&lt;').replaceAll('>','&gt;')}</button>`).join('')}
+function choose(n,el){if(answers[idx]!==undefined)return;answers[idx]=n;document.querySelectorAll('.option').forEach((b,i)=>{b.disabled=true;if(i===current[3])b.classList.add('correct');if(i===n&&n!==current[3])b.classList.add('wrong')});let f=document.getElementById('feedback');f.textContent=(n===current[3]?'সঠিক উত্তর! ':'ভুল উত্তর। ')+current[4];f.classList.remove('hide');document.getElementById('next').disabled=false}
+function nextQ(){if(answers[idx]===undefined)return;if(idx<pool.length-1){idx++;renderQ()}else finish()}
+function finish(){let score=answers.reduce((a,v,i)=>a+(v===pool[i][3]?1:0),0),pct=Math.round(score/pool.length*100);let best=Number(localStorage.getItem('ictbest')||0);if(pct>best){best=pct;localStorage.setItem('ictbest',best)}document.getElementById('best').textContent=bn(best)+'%';document.getElementById('score').textContent=bn(score)+' / '+bn(pool.length);document.getElementById('resultText').textContent='আপনার সঠিক উত্তর '+bn(score)+'টি। প্রাপ্ত নম্বর '+bn(pct)+'%। নিয়মিত অনুশীলন চালিয়ে যান।';showPage('result')}
+function quitQuiz(){if(confirm('পরীক্ষা শেষ না করেই বের হতে চান?'))showPage('home')}
+document.getElementById('totalQ').textContent=bn(questions.length);document.getElementById('best').textContent=bn(Number(localStorage.getItem('ictbest')||0))+'%';renderChapters();
+</script></body></html>
