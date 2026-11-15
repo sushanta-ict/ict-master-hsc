@@ -106,7 +106,6 @@ const questions=[
 
 ];
 
- ];
 const bn=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
 let pool=[],idx=0,answers=[],current=null,seconds=0,timer=null;
 function renderChapters(){let s=chapters.map(c=>`<button class="chapter" onclick="startQuiz(${c.id})"><span><b>${c.short}</b><small>${c.name}</small></span><span>›</span></button>`).join('');document.getElementById('chapterList').innerHTML=s;document.getElementById('homeChapters').innerHTML=s}
