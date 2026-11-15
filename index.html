@@ -1,207 +1,39 @@
-<!doctype html>
-<html lang="bn">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="HSC ICT Class 11–12 MCQ Practice, Model Test and Chapter-wise Quiz by Sushanta Sharma.">
-<meta name="theme-color" content="#102a43">
-<title>ICT Master — HSC ICT MCQ</title>
-<style>
-:root{--navy:#102a43;--blue:#1769aa;--cyan:#22b8cf;--bg:#f3f7fb;--ink:#172b4d;--muted:#62748a;--white:#fff;--green:#16865b;--red:#d64545}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;color:var(--ink)}
-header{background:linear-gradient(120deg,#102a43,#1769aa);color:white;padding:22px 16px 28px}
-.wrap{max-width:1050px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-size:21px;font-weight:850;letter-spacing:.2px}.tag{font-size:12px;background:#ffffff20;padding:7px 10px;border-radius:30px}
-.hero{padding:24px 0 4px}.hero h1{font-size:clamp(25px,5vw,39px);margin:0 0 8px}.hero p{margin:0;color:#d9eafa}
-nav{display:flex;gap:8px;overflow:auto;padding:12px 0}.navbtn,.btn{border:0;border-radius:12px;padding:11px 15px;font-weight:700;cursor:pointer}.navbtn{background:#ffffff18;color:white;white-space:nowrap}.navbtn.active{background:white;color:var(--navy)}
-main{padding:20px 14px 50px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:white;border:1px solid #e3eaf1;border-radius:17px;padding:17px;box-shadow:0 5px 18px #102a4308}.stat strong{font-size:26px;display:block}.muted{color:var(--muted);font-size:13px}.section{margin-top:18px}.section h2{font-size:20px;margin:0 0 12px}.ad{border:1px dashed #a9b9c9;background:#f9fbfd;color:#718096;text-align:center;padding:15px;border-radius:12px;font-size:12px;margin:16px 0}
-.chapters{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.chapter{display:flex;justify-content:space-between;align-items:center;text-align:left;background:white;border:1px solid #e3eaf1;border-radius:13px;padding:14px;cursor:pointer;color:var(--ink)}.chapter small{display:block;color:var(--muted);margin-top:3px}.chapter b{color:var(--blue)}
-.btn{background:var(--blue);color:white}.btn.secondary{background:#eaf2f9;color:var(--blue)}.btn.green{background:var(--green)}.btn:disabled{opacity:.45;cursor:not-allowed}
-.quizbox{max-width:760px;margin:auto}.quizhead{display:flex;justify-content:space-between;gap:10px;align-items:center}.progress{height:8px;background:#e7edf3;border-radius:9px;overflow:hidden;margin:14px 0}.progress span{display:block;height:100%;background:var(--cyan);width:0}.qtext{font-size:20px;font-weight:750;line-height:1.55;margin:20px 0}.option{display:block;width:100%;text-align:left;padding:14px;margin:9px 0;border:1px solid #dbe4ed;border-radius:12px;background:white;color:var(--ink);cursor:pointer;font-size:15px}.option.selected{border-color:var(--blue);background:#eef6ff}.option.correct{border-color:var(--green);background:#e9f8f1}.option.wrong{border-color:var(--red);background:#fff0f0}.feedback{padding:12px;border-radius:10px;margin:12px 0;background:#f0f5fa}.hide{display:none!important}.result{text-align:center}.result .score{font-size:48px;font-weight:900;color:var(--blue)}footer{background:var(--navy);color:#d9eafa;padding:25px 15px;text-align:center}a{color:inherit}.contact{font-size:15px;margin-top:8px}
-@media(max-width:650px){.grid{grid-template-columns:1fr 1fr}.chapters{grid-template-columns:1fr}.top{align-items:flex-start}.tag{font-size:10px}.qtext{font-size:18px}}
-</style></head>
-<body>
-<header><div class="wrap">
- <div class="top"><div class="brand">📘 ICT MASTER</div><div class="tag">HSC ICT • Class XI & XII</div></div>
- <div class="hero"><h1>ICT শিখুন, MCQ-তে এগিয়ে থাকুন</h1><p>অধ্যায়ভিত্তিক অনুশীলন • মডেল টেস্ট • নিজের প্রস্তুতি যাচাই</p></div>
- <nav><button class="navbtn active" onclick="showPage('home',this)">হোম</button><button class="navbtn" onclick="showPage('chapters',this)">অধ্যায়ভিত্তিক MCQ</button><button class="navbtn" onclick="showPage('about',this)">শিক্ষক পরিচিতি</button></nav>
-</div></header>
-<main class="wrap">
- <section id="home">
-  <div class="grid">
-   <div class="card stat"><strong id="totalQ">২০</strong><span class="muted">নমুনা MCQ</span></div>
-   <div class="card stat"><strong>৬</strong><span class="muted">ICT অধ্যায়</span></div>
-   <div class="card stat"><strong id="best">০%</strong><span class="muted">আপনার সেরা স্কোর</span></div>
-  </div>
-  <div class="ad">বিজ্ঞাপনের জায়গা — Google AdSense অনুমোদনের পর এখানে বিজ্ঞাপন দেখাতে পারবেন</div>
-  <div class="section card"><h2>🎯 আজই অনুশীলন শুরু করুন</h2><p class="muted">সময় ধরে MCQ দিন, সঙ্গে সঙ্গে উত্তর মিলিয়ে নিন এবং শেষে ফলাফল দেখুন।</p><button class="btn" onclick="startQuiz('all')">২০টি MCQ দিয়ে মডেল টেস্ট</button> <button class="btn secondary" onclick="showPage('chapters')">অধ্যায় বেছে নিন</button></div>
-  <div class="section"><h2>জনপ্রিয় অধ্যায়</h2><div class="chapters" id="homeChapters"></div></div>
- </section>
- <section id="chapters" class="hide"><h2>অধ্যায়ভিত্তিক MCQ</h2><p class="muted">যে অধ্যায়টি পড়তে চান সেটি নির্বাচন করুন।</p><div class="chapters" id="chapterList"></div><div class="ad">বিজ্ঞাপনের জায়গা — AdSense ad unit code এখানে বসবে</div></section>
- <section id="quiz" class="hide"><div class="quizbox card">
-  <div class="quizhead"><b id="quizTitle">মডেল টেস্ট</b><span class="muted" id="counter">১ / ২০</span></div><div class="progress"><span id="bar"></span></div>
-  <div class="qtext" id="question"></div><div id="options"></div><div id="feedback" class="feedback hide"></div>
-  <div style="display:flex;justify-content:space-between;gap:10px;margin-top:16px"><button class="btn secondary" onclick="quitQuiz()">বের হয়ে যান</button><button class="btn" id="next" onclick="nextQ()" disabled>পরের প্রশ্ন</button></div>
- </div></section>
- <section id="result" class="hide"><div class="card result"><h2>আপনার পরীক্ষার ফলাফল</h2><div class="score" id="score">০%</div><p id="resultText"></p><button class="btn" onclick="startQuiz('all')">আবার পরীক্ষা দিন</button> <button class="btn secondary" onclick="showPage('chapters')">অন্য অধ্যায়</button></div></section>
- <section id="about" class="hide"><div class="card"><h2>শিক্ষক পরিচিতি</h2><h3>Sushanta Sharma</h3><p>Expert in ICT for Class Eleven and Twelve</p><p class="contact">📞 <a href="tel:01717024720">01717024720</a></p><p class="muted">ICT বিষয়ে ক্লাস, MCQ প্রস্তুতি ও মডেল টেস্টের জন্য যোগাযোগ করুন।</p><a class="btn" style="display:inline-block;text-decoration:none" href="https://wa.me/8801717024720">WhatsApp-এ যোগাযোগ</a></div>
- <div class="ad">বিজ্ঞাপনের জায়গা — বিজ্ঞাপন ও স্পন্সর কনটেন্টের জন্য</div></section>
-</main>
-<footer><b>ICT MASTER</b><div>HSC ICT Practice Platform</div><div class="contact">Sushanta Sharma • 01717024720</div><div class="muted" style="color:#b8cce0;margin-top:12px">শিক্ষামূলক অনুশীলনের জন্য তৈরি। প্রশ্নের সংখ্যা ও সিলেবাস নিয়মিত হালনাগাদ করুন।</div></footer>
-<script>
-const chapters=[
- {id:1,name:'তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ',short:'অধ্যায় ১'},
- {id:2,name:'কমিউনিকেশন সিস্টেমস ও নেটওয়ার্কিং',short:'অধ্যায় ২'},
- {id:3,name:'সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস',short:'অধ্যায় ৩'},
- {id:4,name:'ওয়েব ডিজাইন পরিচিতি ও HTML',short:'অধ্যায় ৪'},
- {id:5,name:'প্রোগ্রামিং ভাষা',short:'অধ্যায় ৫'},
- {id:6,name:'ডেটাবেজ ম্যানেজমেন্ট সিস্টেম',short:'অধ্যায় ৬'}
-];
-const questions = [
-[1,"ICT-এর পূর্ণরূপ কী?",["Information and Communication Technology","International Computer Technology","Information Computer Transfer","Internet Communication Tool"],0,"ICT অর্থ Information and Communication Technology।"],
-[1,"বিশ্বগ্রাম ধারণার প্রবক্তা কে?",["চার্লস ব্যাবেজ","মার্শাল ম্যাকলুহান","বিল গেটস","টিম বার্নার্স-লি"],1,"মার্শাল ম্যাকলুহান বিশ্বগ্রাম ধারণার প্রবর্তক।"],
-[1,"বিশ্বগ্রাম ধারণার মূল ভিত্তি কী?",["কৃষি","যোগাযোগ প্রযুক্তি","শিল্পকারখানা","পরিবহন"],1,"তথ্য ও যোগাযোগ প্রযুক্তির মাধ্যমে বিশ্বকে কাছাকাছি আনা হয়।"],
-[1,"বিশ্বগ্রাম শব্দটি প্রথম কে ব্যবহার করেন?",["মার্শাল ম্যাকলুহান","স্টিভ জবস","চার্লস ব্যাবেজ","জেমস ওয়াট"],0,"মার্শাল ম্যাকলুহান Global Village ধারণাটি জনপ্রিয় করেন।"],
-[1,"ইন্টারনেটের মাধ্যমে দূরবর্তী স্থানে তথ্য পাঠানো কোন সুবিধা?",["দ্রুত যোগাযোগ","শারীরিক শ্রম বৃদ্ধি","উৎপাদন হ্রাস","তথ্য ধ্বংস"],0,"ইন্টারনেট দ্রুত তথ্য আদান-প্রদান সম্ভব করে।"],
-[1,"ই-কমার্স বলতে কী বোঝায়?",["ইন্টারনেটে কেনাবেচা","অনলাইনে পড়াশোনা","অনলাইনে চিকিৎসা","অনলাইনে ভোট"],0,"ই-কমার্স হলো ইলেকট্রনিক মাধ্যমে পণ্য বা সেবা কেনাবেচা।"],
-[1,"ই-গভর্ন্যান্সের প্রধান উদ্দেশ্য কী?",["সরকারি সেবার উন্নয়ন","খেলাধুলার উন্নয়ন","কৃষিজমি বৃদ্ধি","বিদ্যুৎ উৎপাদন"],0,"ICT ব্যবহার করে সরকারি সেবা সহজ ও দ্রুত করাই ই-গভর্ন্যান্সের উদ্দেশ্য।"],
-[1,"ই-লার্নিং কী?",["ইন্টারনেটভিত্তিক শিক্ষা","শ্রেণিকক্ষ নির্মাণ","কাগজে পরীক্ষা","মুদ্রিত বই পড়া"],0,"ডিজিটাল প্রযুক্তির মাধ্যমে শিক্ষা গ্রহণকে ই-লার্নিং বলে।"],
-[1,"টেলিমেডিসিন কী?",["দূর থেকে চিকিৎসাসেবা","অনলাইনে কেনাকাটা","দূর থেকে ব্যাংকিং","অনলাইনে খেলাধুলা"],0,"যোগাযোগ প্রযুক্তির মাধ্যমে দূরবর্তী রোগীকে চিকিৎসাসেবা দেওয়া হয়।"],
-[1,"ভিডিও কনফারেন্সিংয়ের জন্য কোনটি প্রয়োজন?",["যোগাযোগ নেটওয়ার্ক","টাইপরাইটার","ফ্যাক্স কাগজ","প্রিন্টার"],0,"ভিডিও কনফারেন্সে ইন্টারনেট বা উপযুক্ত নেটওয়ার্ক প্রয়োজন।"],
-[1,"আউটসোর্সিং কী?",["প্রতিষ্ঠানের কাজ বাইরের ব্যক্তি বা প্রতিষ্ঠানকে দিয়ে করানো","নিজে সব কাজ করা","কম্পিউটার বন্ধ রাখা","তথ্য মুছে ফেলা"],0,"বাইরের দক্ষ ব্যক্তি বা প্রতিষ্ঠানের মাধ্যমে কাজ করানোকে আউটসোর্সিং বলে।"],
-[1,"ফ্রিল্যান্সার কে?",["স্বাধীনভাবে কাজ করা ব্যক্তি","শুধু সরকারি কর্মচারী","শুধু শিক্ষক","শুধু ব্যবসায়ী"],0,"ফ্রিল্যান্সার নির্দিষ্ট প্রতিষ্ঠানের স্থায়ী কর্মী না হয়েও কাজ করেন।"],
-[1,"বাংলাদেশে তথ্যপ্রযুক্তি খাতের একটি সম্ভাবনাময় ক্ষেত্র কোনটি?",["সফটওয়্যার উন্নয়ন","শুধু কয়লা উত্তোলন","শুধু বনজ সম্পদ","শুধু মৎস্য শিকার"],0,"সফটওয়্যার উন্নয়ন বাংলাদেশের ICT খাতের গুরুত্বপূর্ণ ক্ষেত্র।"],
-[1,"ডিজিটাল বাংলাদেশ ধারণার মূল লক্ষ্য কী?",["প্রযুক্তিনির্ভর সেবা ও উন্নয়ন","শুধু কাগজের ব্যবহার","যোগাযোগ বন্ধ করা","শিল্প বন্ধ করা"],0,"তথ্যপ্রযুক্তির মাধ্যমে নাগরিক সেবা ও উন্নয়ন সহজ করাই লক্ষ্য।"],
-[1,"স্মার্ট বাংলাদেশ গড়ার অন্যতম ভিত্তি কোনটি?",["স্মার্ট নাগরিক","শুধু বড় রাস্তা","শুধু বেশি জনসংখ্যা","শুধু কৃষিজমি"],0,"স্মার্ট নাগরিক স্মার্ট বাংলাদেশের গুরুত্বপূর্ণ স্তম্ভ।"],
-[1,"বাংলাদেশে ইউনিয়ন পর্যায়ে ডিজিটাল সেবা প্রদানের কেন্দ্র কোনটি?",["ইউনিয়ন ডিজিটাল সেন্টার","রেলস্টেশন","পোস্টবক্স","বন্দর"],0,"ইউনিয়ন ডিজিটাল সেন্টারের মাধ্যমে স্থানীয় পর্যায়ে বিভিন্ন সেবা দেওয়া হয়।"],
-[1,"বাংলাদেশের প্রথম কৃত্রিম উপগ্রহের নাম কী?",["বঙ্গবন্ধু স্যাটেলাইট-১","বঙ্গবন্ধু স্যাটেলাইট-২","বিজয়-১","বাংলা-১"],0,"বাংলাদেশের প্রথম ভূস্থির যোগাযোগ উপগ্রহ বঙ্গবন্ধু স্যাটেলাইট-১।"],
-[1,"বঙ্গবন্ধু স্যাটেলাইট-১ উৎক্ষেপণ করা হয় কত সালে?",["২০১৬","২০১৭","২০১৮","২০১৯"],2,"বঙ্গবন্ধু স্যাটেলাইট-১ ২০১৮ সালে উৎক্ষেপণ করা হয়।"],
-[1,"বঙ্গবন্ধু স্যাটেলাইট-১ কোন ধরনের উপগ্রহ?",["যোগাযোগ উপগ্রহ","আবহাওয়া বেলুন","চন্দ্রযান","নৌযান"],0,"এটি একটি যোগাযোগ ও সম্প্রচার উপগ্রহ।"],
-[1,"রোবটিক্স কোন বিষয়ের সঙ্গে সম্পর্কিত?",["রোবটের নকশা ও নিয়ন্ত্রণ","শুধু ছবি আঁকা","শুধু হিসাব লেখা","শুধু গান শোনা"],0,"রোবট তৈরি, পরিচালনা ও নিয়ন্ত্রণ রোবটিক্সের অন্তর্ভুক্ত।"],
-[1,"কৃত্রিম বুদ্ধিমত্তা (AI) কী?",["যন্ত্রের বুদ্ধিবৃত্তিক কাজ করার সক্ষমতা","শুধু যন্ত্রের রং","কম্পিউটারের ওজন","ইন্টারনেটের গতি"],0,"AI দিয়ে যন্ত্রকে শেখা, বিশ্লেষণ ও সিদ্ধান্ত গ্রহণে সক্ষম করা হয়।"],
-[1,"মেশিন লার্নিং কী?",["ডেটা থেকে কম্পিউটারের শেখার পদ্ধতি","কম্পিউটার মেরামত","নতুন কীবোর্ড তৈরি","ফাইল প্রিন্ট করা"],0,"মেশিন লার্নিং AI-এর একটি শাখা, যেখানে ডেটা থেকে মডেল শেখে।"],
-[1,"ভার্চুয়াল রিয়েলিটি (VR) কী তৈরি করে?",["কম্পিউটার-সৃষ্ট কৃত্রিম পরিবেশ","বাস্তব কাগজের বই","সাধারণ টেলিফোন","বিদ্যুৎ উৎপাদন"],0,"VR ব্যবহারকারীকে কম্পিউটার-সৃষ্ট পরিবেশের অভিজ্ঞতা দেয়।"],
-[1,"অগমেন্টেড রিয়েলিটি (AR) কী করে?",["বাস্তব জগতে ডিজিটাল উপাদান যুক্ত করে","বাস্তব জগৎ সম্পূর্ণ মুছে দেয়","কম্পিউটার বন্ধ করে","শুধু শব্দ রেকর্ড করে"],0,"AR বাস্তব দৃশ্যের ওপর ডিজিটাল তথ্য বা বস্তু যুক্ত করে।"],
-[1,"বায়োমেট্রিক্সে কোন বৈশিষ্ট্য ব্যবহার করা হয়?",["আঙুলের ছাপ","বইয়ের পৃষ্ঠা","কলমের রং","মনিটরের আকার"],0,"আঙুলের ছাপ, চোখের আইরিস বা মুখের বৈশিষ্ট্য বায়োমেট্রিক শনাক্তকরণে ব্যবহৃত হয়।"],
-[1,"ন্যানোটেকনোলজি সাধারণত কোন মাত্রার প্রযুক্তি?",["ন্যানোমিটার মাত্রা","কিলোমিটার মাত্রা","মিটার মাত্রা","সেন্টিমিটার মাত্রা"],0,"ন্যানোটেকনোলজি প্রায় ১ থেকে ১০০ ন্যানোমিটার মাত্রায় কাজ করে।"],
-[1,"জেনেটিক ইঞ্জিনিয়ারিংয়ের মূল বিষয় কী?",["জিনের পরিবর্তন বা নিয়ন্ত্রণ","কম্পিউটার নেটওয়ার্ক","শব্দ রেকর্ড","ওয়েবসাইট তৈরি"],0,"জীবের জিনগত উপাদান পরিবর্তন বা নিয়ন্ত্রণ জেনেটিক ইঞ্জিনিয়ারিংয়ের কাজ।"],
-[1,"বায়োইনফরমেটিক্সে কোন দুটি ক্ষেত্রের সমন্বয় ঘটে?",["জীববিজ্ঞান ও তথ্যপ্রযুক্তি","ইতিহাস ও ভূগোল","সাহিত্য ও সংগীত","কৃষি ও স্থাপত্য"],0,"জীববৈজ্ঞানিক তথ্য বিশ্লেষণে কম্পিউটার ও গণনাপদ্ধতি ব্যবহৃত হয়।"],
-[1,"ক্রায়োসার্জারি কী?",["অতি নিম্ন তাপমাত্রায় টিস্যু ধ্বংসের চিকিৎসাপদ্ধতি","উচ্চ শব্দে চিকিৎসা","রক্ত পরীক্ষা","এক্স-রে তৈরি"],0,"ক্রায়োসার্জারিতে অত্যন্ত নিম্ন তাপমাত্রা ব্যবহার করে অস্বাভাবিক টিস্যু ধ্বংস করা হয়।"],
-[1,"মহাকাশ গবেষণায় কোন প্রযুক্তি গুরুত্বপূর্ণ?",["স্যাটেলাইট প্রযুক্তি","টাইপরাইটার","ক্যাশ মেমোরি","বারকোড প্রিন্টার"],0,"স্যাটেলাইট যোগাযোগ, পর্যবেক্ষণ ও গবেষণায় ব্যবহৃত হয়।"],
-[1,"ICT ব্যবহারে শিক্ষাক্ষেত্রে কোন সুবিধা পাওয়া যায়?",["দূরশিক্ষা","শিক্ষা বন্ধ","বই নিষিদ্ধ","যোগাযোগ বিচ্ছিন্ন"],0,"ICT দূরশিক্ষা ও অনলাইন শিক্ষার সুযোগ তৈরি করে।"],
-[1,"ICT ব্যবহারে কৃষিক্ষেত্রে কী সুবিধা হয়?",["আবহাওয়া ও বাজারের তথ্য পাওয়া","মাটির প্রয়োজন শেষ হওয়া","ফসলের প্রয়োজন শেষ হওয়া","কৃষিকাজ বন্ধ হওয়া"],0,"কৃষক ICT-এর মাধ্যমে আবহাওয়া, রোগবালাই ও বাজারদর জানতে পারেন।"],
-[1,"ই-ব্যাংকিং কী?",["ইলেকট্রনিক মাধ্যমে ব্যাংকিং সেবা","শুধু ব্যাংকে নগদ জমা","ব্যাংক ভবন নির্মাণ","কাগজের টাকা ছাপানো"],0,"ইন্টারনেট বা ডিজিটাল মাধ্যমে ব্যাংকিং সেবা গ্রহণকে ই-ব্যাংকিং বলে।"],
-[1,"মোবাইল ব্যাংকিংয়ের একটি উদাহরণ কোনটি?",["মোবাইল আর্থিক সেবা","টাইপরাইটার","স্ক্যানার","প্রজেক্টর"],0,"মোবাইল ফোনের মাধ্যমে অর্থ লেনদেন মোবাইল আর্থিক সেবার উদাহরণ।"],
-[1,"সামাজিক যোগাযোগমাধ্যমের প্রধান কাজ কী?",["মানুষের মধ্যে যোগাযোগ ও তথ্য বিনিময়","শুধু হিসাব করা","বিদ্যুৎ উৎপাদন","কম্পিউটার ঠান্ডা রাখা"],0,"সামাজিক যোগাযোগমাধ্যমে মানুষ যোগাযোগ ও তথ্য শেয়ার করে।"],
-[1,"সাইবার অপরাধ কোন মাধ্যমে সংঘটিত হয়?",["কম্পিউটার ও নেটওয়ার্ক","শুধু ডাকযোগে","শুধু রেডিও","শুধু মুদ্রিত বই"],0,"ডিজিটাল ডিভাইস ও নেটওয়ার্ক ব্যবহার করে সংঘটিত অপরাধ সাইবার অপরাধ।"],
-[1,"অন্যের ব্যক্তিগত তথ্য অনুমতি ছাড়া সংগ্রহ করা কীসের উদাহরণ?",["গোপনীয়তা লঙ্ঘন","ডেটা ব্যাকআপ","ই-লার্নিং","ওয়েব ডিজাইন"],0,"অনুমতি ছাড়া ব্যক্তিগত তথ্য সংগ্রহ বা ব্যবহার গোপনীয়তা লঙ্ঘন।"],
-[1,"কম্পিউটার ভাইরাস কী?",["ক্ষতিকর প্রোগ্রাম","একটি ইনপুট ডিভাইস","একটি অপারেটিং সিস্টেম","একটি সার্চ ইঞ্জিন"],0,"ভাইরাস কম্পিউটারের ক্ষতি করতে বা তথ্য নষ্ট করতে পারে।"],
-[1,"ফিশিং কী?",["প্রতারণার মাধ্যমে গোপন তথ্য হাতিয়ে নেওয়া","ফাইল সংকোচন","ডেটা প্রিন্ট","ভিডিও সম্পাদনা"],0,"ফিশিংয়ে ভুয়া বার্তা বা ওয়েবসাইট দিয়ে পাসওয়ার্ডসহ তথ্য চুরি করা হয়।"],
-[1,"সাইবার নিরাপত্তার জন্য কোনটি ভালো অভ্যাস?",["শক্তিশালী পাসওয়ার্ড ব্যবহার","সবাইকে পাসওয়ার্ড দেওয়া","অচেনা লিংকে চাপ দেওয়া","একই পাসওয়ার্ড সবখানে ব্যবহার"],0,"শক্তিশালী ও আলাদা পাসওয়ার্ড নিরাপত্তা বাড়ায়।"],
-[1,"ডিজিটাল স্বাক্ষর কী কাজে ব্যবহৃত হয়?",["ডিজিটাল নথির সত্যতা ও অখণ্ডতা যাচাই","ছবি বড় করা","শব্দ বাড়ানো","মনিটর চালু করা"],0,"ডিজিটাল স্বাক্ষর নথির উৎস ও পরিবর্তন হয়েছে কি না যাচাইয়ে সহায়তা করে।"],
-[1,"কপিরাইট কী সুরক্ষা দেয়?",["সৃষ্টিশীল কাজের স্বত্ব","কম্পিউটারের গতি","ইন্টারনেট সংযোগ","বিদ্যুৎ সরবরাহ"],0,"কপিরাইট সাহিত্য, শিল্প ও অন্যান্য সৃষ্টিশীল কাজের অধিকার সুরক্ষা করে।"],
-[1,"প্লেজিয়ারিজম বলতে কী বোঝায়?",["অন্যের লেখা বা কাজ নিজের নামে চালানো","নিজের লেখা প্রকাশ","তথ্য সংরক্ষণ","ডেটা বিশ্লেষণ"],0,"অন্যের কাজ যথাযথ স্বীকৃতি ছাড়া নিজের নামে ব্যবহার প্লেজিয়ারিজম।"],
-[1,"ডিজিটাল বিভাজন কী?",["প্রযুক্তি ব্যবহারের সুযোগে বৈষম্য","কম্পিউটারের বিভাজন","ফাইল ভাগ করা","নেটওয়ার্কের গতি"],0,"প্রযুক্তি ও ইন্টারনেট ব্যবহারের সুযোগে ব্যক্তি বা অঞ্চলের বৈষম্যকে ডিজিটাল বিভাজন বলে।"],
-[1,"ICT-এর অপব্যবহারের একটি উদাহরণ কোনটি?",["অনলাইনে হয়রানি","অনলাইন শিক্ষা","ই-কমার্স","টেলিমেডিসিন"],0,"অনলাইনে কাউকে হয়রানি করা ICT-এর অপব্যবহার।"],
-[1,"ক্লাউড কম্পিউটিং কী?",["ইন্টারনেটের মাধ্যমে কম্পিউটিং সেবা ব্যবহার","শুধু স্থানীয় প্রিন্টিং","কম্পিউটার বন্ধ রাখা","কাগজে তথ্য লেখা"],0,"ইন্টারনেটের মাধ্যমে সার্ভার, স্টোরেজ ও সফটওয়্যার সেবা ব্যবহারকে ক্লাউড কম্পিউটিং বলে।"],
-[1,"বিগ ডেটা বলতে কী বোঝায়?",["অত্যন্ত বৃহৎ ও জটিল ডেটাসমষ্টি","একটি ছোট ফাইল","একটি ছবি","একটি পাসওয়ার্ড"],0,"যে ডেটা প্রচলিত পদ্ধতিতে সহজে সংরক্ষণ ও বিশ্লেষণ করা কঠিন, তাকে বিগ ডেটা বলে।"],
-[1,"ইন্টারনেট অব থিংস (IoT) কী?",["ইন্টারনেটে সংযুক্ত বিভিন্ন ডিভাইসের নেটওয়ার্ক","শুধু সামাজিক যোগাযোগমাধ্যম","শুধু ওয়েব ব্রাউজার","শুধু কম্পিউটার গেম"],0,"IoT-তে সেন্সর ও সফটওয়্যারযুক্ত ডিভাইস ইন্টারনেটে সংযুক্ত থাকে।"],
-[1,"স্বয়ংক্রিয় গাড়িতে কোন প্রযুক্তি ব্যবহৃত হতে পারে?",["সেন্সর ও কৃত্রিম বুদ্ধিমত্তা","শুধু টাইপরাইটার","শুধু প্রিন্টার","শুধু স্ক্যানার"],0,"স্বয়ংক্রিয় গাড়ি পরিবেশ শনাক্ত ও সিদ্ধান্ত নিতে সেন্সর এবং AI ব্যবহার করে।"],
-
-[2,"ডেটা কমিউনিকেশন কী?",["এক স্থান থেকে অন্য স্থানে ডেটা আদান-প্রদান","ডেটা মুছে ফেলা","কম্পিউটার বন্ধ করা","ফাইল প্রিন্ট করা"],0,"ডেটা কমিউনিকেশন হলো এক ডিভাইস থেকে অন্য ডিভাইসে ডেটা স্থানান্তর।"],
-[2,"ডেটা কমিউনিকেশনের মৌলিক উপাদান কয়টি?",["৩টি","৪টি","৫টি","৬টি"],2,"প্রেরক, প্রাপক, বার্তা, মাধ্যম ও প্রোটোকল—মোট ৫টি মৌলিক উপাদান।"],
-[2,"যে ডিভাইস ডেটা পাঠায় তাকে কী বলে?",["Receiver","Sender","Router","Switch"],1,"Sender হলো ডেটা প্রেরণকারী ডিভাইস।"],
-[2,"যে ডিভাইস ডেটা গ্রহণ করে তাকে কী বলে?",["Sender","Receiver","Repeater","Hub"],1,"Receiver হলো ডেটা গ্রহণকারী ডিভাইস।"],
-[2,"ডেটা আদান-প্রদানের নিয়মাবলিকে কী বলে?",["Protocol","Software","Hardware","Database"],0,"প্রোটোকল ডেটা যোগাযোগের নিয়ম নির্ধারণ করে।"],
-[2,"একটি যোগাযোগ মাধ্যম কোনটি?",["কেবল","কীবোর্ড","মনিটর","প্রিন্টার"],0,"কেবল তারযুক্ত যোগাযোগ মাধ্যম।"],
-[2,"নিচের কোনটি তারবিহীন মাধ্যম?",["Twisted Pair","Coaxial Cable","Optical Fiber","Radio Wave"],3,"রেডিও তরঙ্গ তারবিহীন যোগাযোগে ব্যবহৃত হয়।"],
-[2,"ব্যান্ডউইথ কী নির্দেশ করে?",["ডেটা বহনের ক্ষমতা","কম্পিউটারের ওজন","মনিটরের আকার","ফাইলের নাম"],0,"ব্যান্ডউইথ যোগাযোগ মাধ্যমে ডেটা বহনের ক্ষমতা নির্দেশ করে।"],
-[2,"ডেটা ট্রান্সমিশনের একক কোনটি?",["bps","kg","meter","volt"],0,"bps অর্থ bits per second।"],
-[2,"সিমপ্লেক্স মোডে ডেটা প্রবাহ কেমন?",["উভয় দিকে একসঙ্গে","শুধু একদিকে","পালাক্রমে উভয় দিকে","কোনো দিকেই নয়"],1,"সিমপ্লেক্সে ডেটা কেবল একদিকে প্রবাহিত হয়।"],
-[2,"হাফ-ডুপ্লেক্স মোডে ডেটা প্রবাহ কেমন?",["শুধু একদিকে","উভয় দিকে একসঙ্গে","উভয় দিকে তবে একই সময়ে নয়","কোনো দিকেই নয়"],2,"হাফ-ডুপ্লেক্সে উভয় দিকে ডেটা যায়, তবে একই সময়ে নয়।"],
-[2,"ফুল-ডুপ্লেক্স মোডে ডেটা প্রবাহ কেমন?",["শুধু একদিকে","উভয় দিকে একই সময়ে","পালাক্রমে","শুধু গ্রহণ"],1,"ফুল-ডুপ্লেক্সে একই সময়ে উভয় দিকে ডেটা আদান-প্রদান হয়।"],
-[2,"টেলিফোন কথোপকথন সাধারণত কোন মোডের উদাহরণ?",["Simplex","Half Duplex","Full Duplex","Broadcast"],2,"টেলিফোনে একই সময়ে উভয় পক্ষ কথা বলতে ও শুনতে পারে।"],
-[2,"রেডিও সম্প্রচার কোন ট্রান্সমিশন মোডের উদাহরণ?",["Simplex","Half Duplex","Full Duplex","Multiplex"],0,"সাধারণ রেডিও সম্প্রচারে একমুখী ডেটা প্রবাহ হয়।"],
-[2,"কম্পিউটার নেটওয়ার্ক কী?",["সংযুক্ত কম্পিউটারের সমষ্টি","একটি মনিটর","একটি সফটওয়্যার","একটি কীবোর্ড"],0,"তথ্য ও সম্পদ বিনিময়ের জন্য সংযুক্ত কম্পিউটারসমূহের ব্যবস্থাকে নেটওয়ার্ক বলে।"],
-[2,"LAN-এর পূর্ণরূপ কী?",["Local Area Network","Large Access Network","Long Area Node","Line Access Network"],0,"LAN অর্থ Local Area Network।"],
-[2,"একটি অফিস ভবনের নেটওয়ার্ক সাধারণত কোনটি?",["LAN","WAN","MAN","GAN"],0,"সীমিত এলাকার নেটওয়ার্ককে LAN বলে।"],
-[2,"WAN-এর পূর্ণরূপ কী?",["Wide Area Network","Wireless Access Node","World Area Number","Web Access Network"],0,"WAN অর্থ Wide Area Network।"],
-[2,"ইন্টারনেট কোন ধরনের নেটওয়ার্কের উদাহরণ?",["PAN","LAN","WAN","শুধু MAN"],2,"ইন্টারনেট বিশ্বব্যাপী বিস্তৃত WAN-এর উদাহরণ।"],
-[2,"MAN-এর পূর্ণরূপ কী?",["Metropolitan Area Network","Main Access Network","Mobile Area Node","Multiple Area Number"],0,"MAN অর্থ Metropolitan Area Network।"],
-[2,"ব্যক্তিগত এলাকার নেটওয়ার্ককে কী বলে?",["PAN","WAN","MAN","SAN"],0,"PAN অর্থ Personal Area Network।"],
-[2,"নেটওয়ার্ক টপোলজি কী?",["নেটওয়ার্কের বিন্যাস","কম্পিউটারের রং","ডেটার নাম","সফটওয়্যারের ধরন"],0,"নেটওয়ার্কে ডিভাইসগুলোর সংযোগ বিন্যাসকে টপোলজি বলে।"],
-[2,"বাস টপোলজিতে সব ডিভাইস কোন মাধ্যমে যুক্ত থাকে?",["একটি প্রধান কেবল","একটি কেন্দ্রীয় হাব","একটি রিং","আলাদা আলাদা কেবল"],0,"বাস টপোলজিতে সব ডিভাইস একটি প্রধান ব্যাকবোন কেবলে যুক্ত থাকে।"],
-[2,"স্টার টপোলজিতে কেন্দ্রীয় ডিভাইস হিসেবে কী ব্যবহৃত হয়?",["Hub বা Switch","Printer","Scanner","Keyboard"],0,"স্টার টপোলজিতে সব নোড কেন্দ্রীয় হাব বা সুইচের সঙ্গে যুক্ত থাকে।"],
-[2,"রিং টপোলজিতে ডিভাইসগুলো কীভাবে যুক্ত থাকে?",["বৃত্তাকারভাবে","একটি সরল রেখায়","কেন্দ্রীয় বিন্দুতে","সম্পূর্ণ বিচ্ছিন্নভাবে"],0,"রিং টপোলজিতে ডিভাইসগুলো বৃত্তাকার পথে সংযুক্ত থাকে।"],
-[2,"মেশ টপোলজির প্রধান বৈশিষ্ট্য কী?",["একাধিক সংযোগ পথ","একটি মাত্র সংযোগ পথ","কেন্দ্রীয় হাব বাধ্যতামূলক","কোনো সংযোগ নেই"],0,"মেশ টপোলজিতে নোডগুলোর মধ্যে একাধিক সংযোগ পথ থাকতে পারে।"],
-[2,"নেটওয়ার্কে Router-এর কাজ কী?",["বিভিন্ন নেটওয়ার্কের মধ্যে ডেটা পাঠানো","কাগজ প্রিন্ট করা","ছবি স্ক্যান করা","শব্দ রেকর্ড করা"],0,"রাউটার নেটওয়ার্কের মধ্যে প্যাকেটের পথ নির্ধারণ করে।"],
-[2,"Switch সাধারণত কী কাজে ব্যবহৃত হয়?",["LAN-এর ডিভাইস সংযুক্ত করতে","বিদ্যুৎ উৎপাদন করতে","ছবি সম্পাদনা করতে","ফাইল মুদ্রণ করতে"],0,"সুইচ LAN-এর ডিভাইসগুলোর মধ্যে ডেটা পাঠায়।"],
-[2,"Hub-এর কাজ কী?",["সংযুক্ত পোর্টগুলোতে ডেটা ছড়িয়ে দেওয়া","ডেটা এনক্রিপ্ট করা","ওয়েবসাইট তৈরি করা","ফাইল সংকুচিত করা"],0,"হাব প্রাপ্ত ডেটা সাধারণত সব সংযুক্ত পোর্টে পাঠায়।"],
-[2,"Repeater-এর কাজ কী?",["দুর্বল সংকেত পুনরুজ্জীবিত করা","ডেটা মুছে ফেলা","ফাইল প্রিন্ট করা","পাসওয়ার্ড তৈরি করা"],0,"রিপিটার সংকেত পুনরুজ্জীবিত করে দূরত্ব বাড়াতে সাহায্য করে।"],
-[2,"Modem শব্দটি কোন দুটি শব্দ থেকে এসেছে?",["Modulator ও Demodulator","Modern ও Memory","Module ও Medium","Mode ও Data"],0,"Modem হলো Modulator ও Demodulator শব্দের সংক্ষিপ্ত রূপ।"],
-[2,"Modem-এর প্রধান কাজ কী?",["মডুলেশন ও ডিমডুলেশন","ডেটা প্রিন্ট","ডেটা স্ক্যান","ডেটা মুছে ফেলা"],0,"মডেম ডিজিটাল ও অ্যানালগ সংকেতের মধ্যে রূপান্তর করে।"],
-[2,"NIC-এর পূর্ণরূপ কী?",["Network Interface Card","Network Internet Cable","New Interface Code","Node Information Card"],0,"NIC অর্থ Network Interface Card।"],
-[2,"MAC Address কী?",["নেটওয়ার্ক ইন্টারফেসের হার্ডওয়্যার ঠিকানা","ওয়েবসাইটের নাম","ই-মেইল ঠিকানা","ফাইলের নাম"],0,"MAC Address নেটওয়ার্ক ইন্টারফেস শনাক্ত করতে ব্যবহৃত হয়।"],
-[2,"IP Address কী কাজে লাগে?",["নেটওয়ার্কে ডিভাইস শনাক্ত করতে","মনিটরের রং নির্ধারণ","ফাইল প্রিন্ট","শব্দ বাড়ানো"],0,"IP Address নেটওয়ার্কে ডিভাইসের যৌক্তিক ঠিকানা হিসেবে ব্যবহৃত হয়।"],
-[2,"IPv4 ঠিকানা কত বিটের?",["১৬ বিট","৩২ বিট","৬৪ বিট","১২৮ বিট"],1,"IPv4 ঠিকানা ৩২ বিটের।"],
-[2,"IPv6 ঠিকানা কত বিটের?",["৩২ বিট","৬৪ বিট","১২৮ বিট","২৫৬ বিট"],2,"IPv6 ঠিকানা ১২৮ বিটের।"],
-[2,"DNS-এর কাজ কী?",["ডোমেইন নামকে IP ঠিকানায় রূপান্তর করা","ফাইল মুছে ফেলা","ই-মেইল প্রিন্ট করা","কম্পিউটার বন্ধ করা"],0,"DNS ডোমেইন নামের সঙ্গে সংশ্লিষ্ট IP ঠিকানা খুঁজে দেয়।"],
-[2,"URL-এর পূর্ণরূপ কী?",["Uniform Resource Locator","Universal Record Link","United Resource Line","Uniform Router Location"],0,"URL হলো ওয়েব রিসোর্সের ঠিকানা।"],
-[2,"HTTP-এর পূর্ণরূপ কী?",["Hypertext Transfer Protocol","High Text Transfer Program","Hyperlink Transmission Process","Host Transfer Protocol"],0,"HTTP ওয়েবের তথ্য আদান-প্রদানের একটি প্রোটোকল।"],
-[2,"HTTPS-এ S দ্বারা কী বোঝায়?",["Secure","Server","System","Signal"],0,"HTTPS হলো নিরাপদ যোগাযোগের জন্য TLS-সুরক্ষিত HTTP।"],
-[2,"FTP কী কাজে ব্যবহৃত হয়?",["ফাইল আদান-প্রদান","ওয়েব পেজ ডিজাইন","ছবি তোলা","শব্দ শোনা"],0,"FTP হলো File Transfer Protocol।"],
-[2,"ই-মেইল পাঠানোর জন্য কোন প্রোটোকল ব্যবহৃত হয়?",["SMTP","FTP","HTTP","POP3"],0,"SMTP ই-মেইল পাঠানোর জন্য ব্যবহৃত হয়।"],
-[2,"ই-মেইল গ্রহণের একটি প্রোটোকল কোনটি?",["POP3","SMTP","FTP","HTML"],0,"POP3 সার্ভার থেকে ই-মেইল গ্রহণে ব্যবহৃত হয়।"],
-[2,"TCP-এর পূর্ণরূপ কী?",["Transmission Control Protocol","Transfer Computer Program","Total Communication Process","Technical Control Protocol"],0,"TCP অর্থ Transmission Control Protocol।"],
-[2,"TCP-এর একটি বৈশিষ্ট্য কী?",["নির্ভরযোগ্য ডেটা পরিবহন","শুধু ছবি প্রদর্শন","বিদ্যুৎ সরবরাহ","ডেটা প্রিন্ট"],0,"TCP ডেটা নির্ভরযোগ্যভাবে পৌঁছানোর ব্যবস্থা করে।"],
-[2,"UDP-এর পূর্ণরূপ কী?",["User Datagram Protocol","Universal Data Program","United Digital Process","User Data Port"],0,"UDP অর্থ User Datagram Protocol।"],
-[2,"Wi-Fi কোন ধরনের যোগাযোগ প্রযুক্তি?",["তারবিহীন","শুধু তারযুক্ত","অপটিক্যাল ডিস্ক","মুদ্রণ প্রযুক্তি"],0,"Wi-Fi রেডিও তরঙ্গ ব্যবহার করে তারবিহীন নেটওয়ার্ক সংযোগ দেয়।"],
-[2,"Bluetooth সাধারণত কোন কাজে ব্যবহৃত হয়?",["স্বল্প দূরত্বে তারবিহীন যোগাযোগ","দীর্ঘ দূরত্বে স্যাটেলাইট যোগাযোগ","কাগজ প্রিন্ট","ডেটাবেজ তৈরি"],0,"Bluetooth কাছাকাছি ডিভাইসের মধ্যে তারবিহীন যোগাযোগে ব্যবহৃত হয়।"],
-[2,"ফাইবার অপটিক কেবলে ডেটা কীভাবে পরিবাহিত হয়?",["আলোর মাধ্যমে","শব্দের মাধ্যমে","তাপের মাধ্যমে","চৌম্বকীয় কালি দিয়ে"],0,"ফাইবার অপটিক কেবলে আলোর পালসের মাধ্যমে ডেটা পরিবাহিত হয়।"],
-[2,"অপটিক্যাল ফাইবারের একটি সুবিধা কী?",["উচ্চ গতিতে ডেটা পরিবহন","বেশি বৈদ্যুতিক বাধা","কম ডেটা বহন","সহজে তড়িৎচৌম্বকীয় বিঘ্ন"],0,"অপটিক্যাল ফাইবার উচ্চ ব্যান্ডউইথ ও তড়িৎচৌম্বকীয় বিঘ্নের প্রতি কম সংবেদনশীল।"],
-];
-
-// অধ্যায় ৩: সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস
-[3,"বাইনারি সংখ্যা পদ্ধতির ভিত্তি কত?",["২","৮","১০","১৬"],0,"বাইনারি সংখ্যা পদ্ধতির ভিত্তি ২।"],
-[3,"(1010)₂-এর দশমিক মান কত?",["৮","৯","১০","১২"],2,"(1010)₂ = ৮+০+২+০ = ১০।"],
-[3,"হেক্সাডেসিমেল সংখ্যা পদ্ধতির ভিত্তি কত?",["২","৮","১০","১৬"],3,"হেক্সাডেসিমেল সংখ্যা পদ্ধতির ভিত্তি ১৬।"],
-[3,"১ বাইট সমান কত বিট?",["৪","৮","১৬","৩২"],1,"১ বাইট = ৮ বিট।"],
-[3,"AND গেটে সব ইনপুট ১ হলে আউটপুট কত?",["০","১","১০","অনির্দিষ্ট"],1,"AND গেটের সব ইনপুট ১ হলেই আউটপুট ১ হয়।"],
-[3,"নিচের কোনটি সার্বজনীন লজিক গেট?",["AND","OR","NAND","XOR"],2,"NAND গেট দিয়ে যেকোনো মৌলিক লজিক গেট তৈরি করা সম্ভব।"],
-
-// অধ্যায় ৪: ওয়েব ডিজাইন ও HTML
-[4,"HTML-এর পূর্ণরূপ কী?",["Hyper Text Markup Language","High Transfer Machine Language","Hyperlink Text Making Language","Home Tool Markup Language"],0,"HTML-এর পূর্ণরূপ Hyper Text Markup Language।"],
-[4,"HTML ডকুমেন্টের দৃশ্যমান অংশ কোনটি?",["HEAD","TITLE","BODY","META"],2,"BODY অংশে ওয়েব পেজের দৃশ্যমান কনটেন্ট থাকে।"],
-[4,"HTML-এ সবচেয়ে বড় Heading Tag কোনটি?",["H6","H1","HEAD","TITLE"],1,"H1 হলো HTML-এর সর্বোচ্চ স্তরের Heading Tag।"],
-[4,"ওয়েব পেজে ছবি যুক্ত করতে কোন ট্যাগ ব্যবহৃত হয়?",["IMG","PIC","IMAGE","PHOTO"],0,"IMG ট্যাগ দিয়ে ওয়েব পেজে ছবি যুক্ত করা হয়।"],
-[4,"হাইপারলিংক তৈরিতে কোন HTML ট্যাগ ব্যবহৃত হয়?",["P","A","BR","HR"],1,"A বা Anchor ট্যাগ দিয়ে হাইপারলিংক তৈরি করা হয়।"],
-[4,"HTML-এ নতুন লাইন শুরু করতে কোন ট্যাগ ব্যবহৃত হয়?",["BR","HR","B","I"],0,"BR ট্যাগ লাইন ব্রেক তৈরি করে।"],
-
-// অধ্যায় ৫: প্রোগ্রামিং ভাষা
-[5,"C ভাষার উদ্ভাবক কে?",["বিল গেটস","ডেনিস রিচি","চার্লস ব্যাবেজ","জেমস গসলিং"],1,"ডেনিস রিচি C প্রোগ্রামিং ভাষা তৈরি করেন।"],
-[5,"C ভাষায় আউটপুট প্রদর্শনের ফাংশন কোনটি?",["scanf()","printf()","gets()","main()"],1,"printf() ফাংশনের মাধ্যমে আউটপুট প্রদর্শন করা হয়।"],
-[5,"C ভাষায় ইনপুট নেওয়ার প্রচলিত ফাংশন কোনটি?",["printf()","scanf()","return()","break()"],1,"scanf() ফাংশনের মাধ্যমে ইনপুট নেওয়া হয়।"],
-[5,"একই কাজ বারবার সম্পাদনের জন্য কোনটি ব্যবহৃত হয়?",["Loop","Variable","Constant","Comment"],0,"Loop ব্যবহার করে একই কাজ বারবার করা যায়।"],
-[5,"C ভাষায় একটি সাধারণ Statement-এর শেষে কোন চিহ্ন বসে?",[":",";","?",","],1,"C ভাষায় Statement সাধারণত সেমিকোলন দিয়ে শেষ হয়।"],
-[5,"C ভাষায় পূর্ণসংখ্যার ডেটা টাইপ কোনটি?",["float","char","int","double"],2,"int ডেটা টাইপ পূর্ণসংখ্যা সংরক্ষণ করে।"],
-
-// অধ্যায় ৬: ডেটাবেজ ম্যানেজমেন্ট সিস্টেম
-[6,"DBMS-এর পূর্ণরূপ কী?",["Database Management System","Data Backup Management Service","Digital Base Memory System","Database Machine Setup"],0,"DBMS হলো Database Management System।"],
-[6,"রিলেশনাল ডেটাবেজে একটি সারিকে কী বলা হয়?",["Field","Record বা Tuple","Column","Table"],1,"রিলেশনাল টেবিলের একটি সারিকে Record বা Tuple বলা হয়।"],
-[6,"ডেটাবেজে Primary Key-এর কাজ কী?",["রেকর্ড অনন্যভাবে শনাক্ত করা","ছবি সম্পাদনা করা","ফাইল প্রিন্ট করা","ডেটা মুছে ফেলা"],0,"Primary Key প্রতিটি রেকর্ডকে স্বতন্ত্রভাবে শনাক্ত করে।"],
-[6,"SQL-এর পূর্ণরূপ কী?",["Structured Query Language","Simple Question Logic","System Query Link","Standard Quick Language"],0,"SQL হলো Structured Query Language।"],
-[6,"ডেটাবেজে সারির একটি নির্দিষ্ট বৈশিষ্ট্যকে কী বলা হয়?",["Record","Field","Table","Query"],1,"একটি Field কোনো রেকর্ডের নির্দিষ্ট বৈশিষ্ট্য বা তথ্য নির্দেশ করে।"],
-[6,"ডেটাবেজ থেকে তথ্য খোঁজার জন্য কোনটি ব্যবহৃত হয়?",["Query","Slide","Animation","Browser"],0,"Query ব্যবহার করে ডেটাবেজ থেকে প্রয়োজনীয় তথ্য খোঁজা বা বের করা হয়।"]
-
-];
-
-const bn=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
-let pool=[],idx=0,answers=[],current=null,seconds=0,timer=null;
-function renderChapters(){let s=chapters.map(c=>`<button class="chapter" onclick="startQuiz(${c.id})"><span><b>${c.short}</b><small>${c.name}</small></span><span>›</span></button>`).join('');document.getElementById('chapterList').innerHTML=s;document.getElementById('homeChapters').innerHTML=s}
-function showPage(id,btn){['home','chapters','quiz','result','about'].forEach(x=>document.getElementById(x).classList.toggle('hide',x!==id));document.querySelectorAll('.navbtn').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');}
-function startQuiz(ch){clearInterval(timer);pool=questions.filter(q=>ch==='all'||q[0]===ch).sort(()=>Math.random()-.5);idx=0;answers=[];document.getElementById('quizTitle').textContent=ch==='all'?'পূর্ণাঙ্গ মডেল টেস্ট':chapters[ch-1].name;showPage('quiz');renderQ()}
-function renderQ(){current=pool[idx];document.getElementById('counter').textContent=bn(idx+1)+' / '+bn(pool.length);document.getElementById('bar').style.width=((idx)/pool.length*100)+'%';document.getElementById('question').textContent=current[1];document.getElementById('feedback').classList.add('hide');document.getElementById('next').disabled=true;document.getElementById('next').textContent=idx===pool.length-1?'ফলাফল দেখুন':'পরের প্রশ্ন';document.getElementById('options').innerHTML=current[2].map((o,i)=>`<button class="option" onclick="choose(${i},this)">${'ক খ গ ঘ'[i]}. ${o.replaceAll('<','&lt;').replaceAll('>','&gt;')}</button>`).join('')}
-function choose(n,el){if(answers[idx]!==undefined)return;answers[idx]=n;document.querySelectorAll('.option').forEach((b,i)=>{b.disabled=true;if(i===current[3])b.classList.add('correct');if(i===n&&n!==current[3])b.classList.add('wrong')});let f=document.getElementById('feedback');f.textContent=(n===current[3]?'সঠিক উত্তর! ':'ভুল উত্তর। ')+current[4];f.classList.remove('hide');document.getElementById('next').disabled=false}
-function nextQ(){if(answers[idx]===undefined)return;if(idx<pool.length-1){idx++;renderQ()}else finish()}
-function finish(){let score=answers.reduce((a,v,i)=>a+(v===pool[i][3]?1:0),0),pct=Math.round(score/pool.length*100);let best=Number(localStorage.getItem('ictbest')||0);if(pct>best){best=pct;localStorage.setItem('ictbest',best)}document.getElementById('best').textContent=bn(best)+'%';document.getElementById('score').textContent=bn(score)+' / '+bn(pool.length);document.getElementById('resultText').textContent='আপনার সঠিক উত্তর '+bn(score)+'টি। প্রাপ্ত নম্বর '+bn(pct)+'%। নিয়মিত অনুশীলন চালিয়ে যান।';showPage('result')}
-function quitQuiz(){if(confirm('পরীক্ষা শেষ না করেই বের হতে চান?'))showPage('home')}
-document.getElementById('totalQ').textContent=bn(questions.length);document.getElementById('best').textContent=bn(Number(localStorage.getItem('ictbest')||0))+'%';renderChapters();
-</script></body></html>
+ const q=quiz[current], selected=answers[current];
+ $("chapterLabel").textContent="অধ্যায় "+bn(q[0])+": "+chapterNames[q[0]];
+ $("counter").textContent="প্রশ্ন "+bn(current+1)+" / "+bn(quiz.length);
+ $("bar").style.width=((current+1)/quiz.length*100)+"%";
+ $("question").textContent=bn(current+1)+". "+q[1];
+ $("options").innerHTML="";
+ q[2].forEach((op,i)=>{
+  const b=document.createElement("button");b.className="option";b.textContent="("+ "কখগঘ"[i]+") "+op;
+  if(selected!==undefined){b.disabled=true;if(i===q[3])b.classList.add("correct");else if(i===selected)b.classList.add("wrong")}
+  b.addEventListener("click",()=>choose(i));$("options").appendChild(b);
+ });
+ $("explanation").style.display=selected===undefined?"none":"block";
+ $("explanation").textContent=selected===undefined?"":(selected===q[3]?"সঠিক উত্তর! ":"ভুল উত্তর। ")+q[4];
+ $("prev").disabled=current===0;$("next").disabled=selected===undefined;
+ $("next").textContent=current===quiz.length-1?"ফলাফল দেখুন":"পরের প্রশ্ন";
+}
+function choose(i){
+ if(answers[current]!==undefined)return;
+ answers[current]=i;if(i===quiz[current][3])score++;
+ $("doneCount").textContent=bn(Object.keys(answers).length);
+ $("scoreCount").textContent=bn(score);render();
+}
+function next(){
+ if(answers[current]===undefined)return;
+ if(current<quiz.length-1){current++;render()}else showResult();
+}
+function showResult(){
+ $("quiz").classList.add("hidden");$("result").classList.remove("hidden");
+ $("finalScore").textContent=bn(score)+" / "+bn(quiz.length);
+ const pct=Math.round(score/quiz.length*100);
+ $("resultText").textContent="আপনার প্রাপ্ত নম্বর "+bn(pct)+"%। "+(pct>=80?"চমৎকার!":"আরও অনুশীলন করুন।");
+}
+$("start").addEventListener("click",startQuiz);
+$("reset").addEventListener("click",()=>{answers={};score=0;quiz=[];$("doneCount").textContent="০";$("scoreCount").textContent="০";$("question").textContent="অধ্যায় নির্বাচন করে শুরু করুন।";$("options").innerHTML="";$("explanation").style.display="none";$("counter").textContent="প্রশ্ন ০ / ০";$("bar").style.width="0%";$("result").classList.add("hidden");$("quiz").classList.remove("hidden")});
+$("prev").addEventListener("click",()=>{if(current>0){current--;render()}});
+$("next").addEventListener("click",next);
+$("again").addEventListener("click",startQuiz);
+</script>
+</body></html>
